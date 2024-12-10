@@ -39,8 +39,6 @@ main(){
 				;;
 			"selection")
 				old_state=$state
-				#update_legend
-				check_for_victory
 				read_game_input
 				clear_input
 				;;
@@ -55,7 +53,10 @@ main(){
 			"victoryCross"|"victoryNought")
 				old_state=$state
 				#Display correct victory screen
+				echo -ne "\n YOU WIN!\n\n"
 				#read_victory_input
+				read player_input
+				state="menu"
 				#clear_input
 				;;
 			*) 
